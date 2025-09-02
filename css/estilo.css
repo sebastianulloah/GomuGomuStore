@@ -1,0 +1,93 @@
+/* ===== RESET GENERAL ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  background-color: #0f0f1a; /* Fondo oscuro estilo gamer */
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+.btn-outline-success{
+    color: #fff;
+    background: #ff007f;
+    box-shadow: 0 0 5px #ff00ff
+}
+
+.btn-outline-success:hover{
+    background: #fd1388;
+    box-shadow: 0 0 5px #b600b6;
+}
+
+
+header {
+  background: linear-gradient(90deg, #ff007f, #7f00ff); /* Neon friki */
+  padding: 1rem 2rem;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+header h1 {
+  font-size: 2rem;
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px #fff, 0 0 20px #ff00ff;
+}
+
+nav {
+  margin-top: 1rem;
+  font-size: x-large;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  background: #f312e0;
+  box-shadow: 0 0 5px #4e014e;
+  color: #fff;
+}
+
+.logo{
+    height: 70px;
+    width: 70px;
+}
+
+footer {
+  background: #0a0a14;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  border-top: 2px solid #ff00ff;
+}
+
+/* ===== RESPONSIVIDAD ===== */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+}
