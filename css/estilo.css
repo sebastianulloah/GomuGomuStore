@@ -100,6 +100,24 @@ footer {
 
 main {
   min-height: 100vh;
-  background: url('../imagenes/fondogomus.jpg') center/cover no-repeat fixed;
-  padding: 2rem;
+  background: url('/imagenes/fondogomus.jpg') center/cover no-repeat fixed;
+  padding: 0 2rem 2rem;
+}
+
+.imgSuperior {
+  width: 100%;
+  height: 300%;
+  object-fit: cover;      /* Cubre toda la caja, recortando si es necesario */
+  object-position: center;/* Centra el recorte */
+  border: 2px solid #ccc;
+  border-radius: 8px;
+}
+
+/* Carrusel con imágenes del mismo tamaño */
+.carousel-inner img {
+  width: 100%;
+  height: 400px; /* ajusta a tu diseño */
+  object-fit: contain;
+  border-radius: 8px;
+  
 }
