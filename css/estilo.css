@@ -91,3 +91,9 @@ footer {
   }
 
 }
+
+main {
+  min-height: 100vh;
+  background: url('/imagenes/fondogomus.jpg') center/cover no-repeat fixed;
+  padding: 2rem;
+}
