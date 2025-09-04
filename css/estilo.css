@@ -79,6 +79,12 @@ footer {
   border-top: 2px solid #ff00ff;
 }
 
+.nosotross {
+
+    height: 145px;
+    width: 145px;
+}
+
 /* ===== RESPONSIVIDAD ===== */
 @media (max-width: 768px) {
   header h1 {
@@ -94,6 +100,6 @@ footer {
 
 main {
   min-height: 100vh;
-  background: url('/imagenes/fondogomus.jpg') center/cover no-repeat fixed;
+  background: url('../imagenes/fondogomus.jpg') center/cover no-repeat fixed;
   padding: 2rem;
 }
