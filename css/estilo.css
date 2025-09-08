@@ -121,3 +121,17 @@ main {
   border-radius: 8px;
   
 }
+
+/* Imagen de la tienda */
+.tienda-img {
+  max-width: 900px;         /* limita el tamaño en pantallas grandes */
+  width: 100%;              /* que se ajuste en pantallas pequeñas */
+  border-radius: 15px;      /* bordes redondeados */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6); /* sombra elegante */
+  margin-top: 15px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.tienda-img:hover {
+  transform: scale(1.03);   /* pequeño zoom al pasar el mouse */
+}
