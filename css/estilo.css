@@ -100,7 +100,7 @@ footer {
 
 main {
   min-height: 100vh;
-  background: url('/imagenes/fondogomus.jpg') center/cover no-repeat fixed;
+  background: url('../imagenes/fondogomus.jpg') center/cover no-repeat fixed;
   padding: 0 2rem 2rem;
 }
 
