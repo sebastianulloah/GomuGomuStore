@@ -28,14 +28,21 @@ header {
   background: linear-gradient(90deg, #ff007f, #7f00ff); /* Neon friki */
   padding: 1rem 2rem;
   text-align: center;
-  color: #fff;
+  color: #ffffff;
+  font-weight: 600;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow:#7f00ff
 }
 
 header h1 {
   font-size: 2rem;
   letter-spacing: 2px;
+  font-weight: 800; /* más grueso que el normal */
+  color: #ffffff;   /* blanco puro */
   text-shadow: 0 0 10px #fff, 0 0 20px #ff00ff;
+  
 }
 
 nav {
@@ -59,15 +66,38 @@ nav a {
   transition: all 0.3s ease;
 }
 
-nav a:hover {
-  background: #f312e0;
-  box-shadow: 0 0 5px #4e014e;
-  color: #fff;
+
+/* Enlaces del navbar */
+.navbar-nav .nav-link {
+  color: #ffffff !important;
+  font-weight: 700;
 }
 
+/* Enlaces activos */
+.navbar-nav .nav-link.active {
+  color: #ffffff !important;
+  font-weight: 800;
+}
+
+/* Dropdown items */
+.dropdown-menu .dropdown-item {
+  color: #ffffff !important;
+  font-weight: 600;
+  background-color: transparent;
+}
+
+/* Opcional: fondo oscuro para dropdown */
+.dropdown-menu {
+  background-color: #1a1a2e;
+  border: none;
+}
+.navbar-nav .nav-link:hover {
+  color: #ff00ff !important;
+  text-shadow: 0 0 5px #ff00ff;
+}
 .logo{
-    height: 120px;
-    width: 145px;
+    height: 100px;
+    width: 125px;
 }
 
 footer {
@@ -109,8 +139,6 @@ main {
   height: 300%;
   object-fit: cover;      /* Cubre toda la caja, recortando si es necesario */
   object-position: center;/* Centra el recorte */
-  border: 2px solid #ccc;
-  border-radius: 8px;
 }
 
 /* Carrusel con imágenes del mismo tamaño */
@@ -121,17 +149,91 @@ main {
   border-radius: 8px;
   
 }
-
-/* Imagen de la tienda */
-.tienda-img {
-  max-width: 900px;         /* limita el tamaño en pantallas grandes */
-  width: 100%;              /* que se ajuste en pantallas pequeñas */
-  border-radius: 15px;      /* bordes redondeados */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6); /* sombra elegante */
-  margin-top: 15px;
-  transition: transform 0.3s ease-in-out;
+/* 1. Contenedor con scroll vertical y ancho máximo */
+.products-scroll {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding-right: 4px;
 }
 
-.tienda-img:hover {
-  transform: scale(1.03);   /* pequeño zoom al pasar el mouse */
+/* Scrollbar personalizado (WebKit) */
+.products-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+.products-scroll::-webkit-scrollbar-track {
+  background: #1a1a2e;
+}
+.products-scroll::-webkit-scrollbar-thumb {
+  background-color: #ff00ff;
+  border-radius: 4px;
+  border: 2px solid #1a1a2e;
+}
+
+/* 2. Forzar 3 columnas por fila usando Flexbox */
+/* Convertimos la .row interna en flex container */
+.products-scroll .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0; /* anulamos márgenes negativos de Bootstrap */
+}
+
+/* Cada columna (.col-*) ocupa un tercio del ancho */
+.products-scroll .row > [class*="col-"] {
+  flex: 0 0 33.3333%;
+  max-width: 33.3333%;
+  padding-right: 0.75rem; /* retener gutter horizontal de g-4 */
+  padding-left:  0.75rem;
+  margin-bottom: 1.5rem;  /* gutter vertical de g-4 */
+}
+
+/* 3. Tarjetas “flotantes” de igual altura */
+.products-scroll .card {
+  display: flex;
+  flex-direction: column;
+  flex: 1; /* llena la altura de su wrapper .col */
+  background-color: #1f1f2e;
+  border: none;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.products-scroll .card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8);
+}
+
+/* 4. Imagen con altura fija en todas las tarjetas */
+.products-scroll .card-img-top {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  object-position: center;
+}
+
+/* 5. Cuerpo de la tarjeta: empuja el botón al pie */
+.products-scroll .card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.products-scroll .card-body .btn {
+  margin-top: auto;
+  background-color: #ff007f;
+  border: none;
+}
+.products-scroll .card-body .btn:hover {
+  background-color: #fd1388;
+}
+
+/* 6. Texto en color claro */
+.products-scroll .card-title,
+.products-scroll .card-text {
+  color: #ffffff;
 }
