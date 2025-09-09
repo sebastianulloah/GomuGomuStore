@@ -66,6 +66,23 @@ nav a {
   transition: all 0.3s ease;
 }
 
+.espacio-extra {
+
+    margin-bottom: 40px;
+}
+
+#nosotros h2 {
+  margin-bottom: 90px !important; /* sobreescribe Bootstrap */
+}
+
+#nosotros {
+    margin-top: 0;       /* sin espacio arriba */
+    margin-bottom: 60px; /* solo espacio abajo */
+}
+
+h3.fw-bold.text-white {
+  margin-bottom: 80px !important;
+}
 
 /* Enlaces del navbar */
 .navbar-nav .nav-link {
