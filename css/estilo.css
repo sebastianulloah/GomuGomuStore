@@ -115,18 +115,6 @@ footer {
     width: 145px;
 }
 
-/* ===== RESPONSIVIDAD ===== */
-@media (max-width: 768px) {
-  header h1 {
-    font-size: 1.5rem;
-  }
-
-  nav ul {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-}
 
 main {
   min-height: 100vh;
@@ -149,7 +137,7 @@ main {
   border-radius: 8px;
   
 }
-/* 1. Contenedor con scroll vertical y ancho máximo */
+/* 1. Contenedor con scroll y ancho máximo */
 .products-scroll {
   width: 100%;
   max-width: 1400px;
@@ -172,28 +160,24 @@ main {
   border: 2px solid #1a1a2e;
 }
 
-/* 2. Forzar 3 columnas por fila usando Flexbox */
-/* Convertimos la .row interna en flex container */
+/* 2. Layout responsive: CSS Grid con auto-fit */
 .products-scroll .row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin: 0; /* elimina los márgenes negativos que añade Bootstrap */
+}
+
+/* Cada “col” como flex container para igualar alturas */
+.products-scroll .row > * {
   display: flex;
-  flex-wrap: wrap;
-  margin: 0; /* anulamos márgenes negativos de Bootstrap */
 }
 
-/* Cada columna (.col-*) ocupa un tercio del ancho */
-.products-scroll .row > [class*="col-"] {
-  flex: 0 0 33.3333%;
-  max-width: 33.3333%;
-  padding-right: 0.75rem; /* retener gutter horizontal de g-4 */
-  padding-left:  0.75rem;
-  margin-bottom: 1.5rem;  /* gutter vertical de g-4 */
-}
-
-/* 3. Tarjetas “flotantes” de igual altura */
-.products-scroll .card {
+/* 3. Tarjetas “flotantes” de misma altura */
+.products-scroll .card-floating {
   display: flex;
   flex-direction: column;
-  flex: 1; /* llena la altura de su wrapper .col */
+  height: 100%;          /* llena la celda del grid */
   background-color: #1f1f2e;
   border: none;
   border-radius: 8px;
@@ -201,13 +185,12 @@ main {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
   transition: transform 0.2s, box-shadow 0.2s;
 }
-
-.products-scroll .card:hover {
+.products-scroll .card-floating:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8);
 }
 
-/* 4. Imagen con altura fija en todas las tarjetas */
+/* 4. Imagen fija, mantiene proporciones */
 .products-scroll .card-img-top {
   width: 100%;
   height: 200px;
@@ -215,14 +198,13 @@ main {
   object-position: center;
 }
 
-/* 5. Cuerpo de la tarjeta: empuja el botón al pie */
+/* 5. Cuerpo de tarjeta que empuja el botón al pie */
 .products-scroll .card-body {
   flex: 1;
   display: flex;
   flex-direction: column;
   padding: 1rem;
 }
-
 .products-scroll .card-body .btn {
   margin-top: auto;
   background-color: #ff007f;
@@ -238,6 +220,7 @@ main {
   color: #ffffff;
 }
 
+
 /* Imagen de la tienda */
 .tienda-img {
   max-width: 900px;         /* limita el tamaño en pantallas grandes */
@@ -250,4 +233,17 @@ main {
 
 .tienda-img:hover {
   transform: scale(1.03);   /* pequeño zoom al pasar el mouse */
+}
+
+/* ===== RESPONSIVIDAD ===== */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
 }
