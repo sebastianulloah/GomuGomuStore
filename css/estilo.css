@@ -71,6 +71,72 @@ nav a {
     margin-bottom: 40px;
 }
 
+.neon-title {
+  font-size: 2rem;
+  text-shadow: 0 0 8px #ff00ff;
+  letter-spacing: 1px;
+}
+
+.categoria-img {
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 12px rgba(255, 0, 127, 0.4);
+  border-radius: 12px;
+}
+
+.categoria-link:hover .categoria-img {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(255, 0, 127, 0.6);
+}
+
+.categoria-link p {
+  font-size: 1.1rem;
+  text-shadow: 0 0 4px rgba(255, 255, 255, 0.3);
+}
+
+
+/* Contenedor del carrusel */
+.custom-carousel {
+  background-color: #1a1a2e;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+  padding: 0.5rem;
+  transition: box-shadow 0.3s ease;
+}
+
+/* Imágenes dentro del carrusel */
+.carousel-img {
+  height: 320px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.carousel-item:hover .carousel-img {
+  transform: scale(1.02);
+}
+
+/* Indicadores personalizados */
+.carousel-indicators [data-bs-target] {
+  background-color: #ff007f;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.carousel-indicators .active {
+  opacity: 1;
+}
+
+/* Flechas de navegación */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: drop-shadow(0 0 4px #ff00ff);
+}
+
+
 #nosotros h2 {
   margin-bottom: 90px !important; /* sobreescribe Bootstrap */
 }
@@ -239,6 +305,33 @@ main.container .row {
 .card-floating .btn:hover {
   background-color: #fd1388;
   box-shadow: 0 4px 12px rgba(255, 87, 120, 0.6);
+}
+
+.card-body h2.card-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #ffffff;
+  text-shadow: 0 0 6px #ff007f;
+}
+
+.card-body h3.card-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #ff007f;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.card-body p.descripcion {
+  font-size: 12px;
+  color: #e0e0e0;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  background-color: rgba(255, 255, 255, 0.03);
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
 }
 
 /* Imagen de la tienda */
