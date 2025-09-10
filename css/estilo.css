@@ -66,6 +66,42 @@ nav a {
   transition: all 0.3s ease;
 }
 
+/* todo esto para bajo es para la seccion de noticias o blogs */
+
+.blog-card {
+  background: #141021; /* Fondo oscuro */
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.7);
+}
+
+.blog-card h3 {
+  color: #ffffff;
+}
+
+.blog-card p {
+  color: #d1cce5;
+}
+
+.btn-custom {
+  background: #ff0080;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  transition: opacity 0.3s ease;
+}
+
+.btn-custom:hover {
+  opacity: 0.85;
+}
+
 .espacio-extra {
 
     margin-bottom: 40px;
