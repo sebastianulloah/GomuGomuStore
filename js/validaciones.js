@@ -5,29 +5,38 @@ function validarCampoLongitud(input, min, max, mensaje) {
   const feedback = input.nextElementSibling;
 
   if (valor.length < min || valor.length > max) {
-    input.classList.add('is-invalid');
-    input.classList.remove('is-valid');
+    input.classList.add("is-invalid");
+    input.classList.remove("is-valid");
     feedback.textContent = mensaje;
   } else {
-    input.classList.remove('is-invalid');
-    input.classList.add('is-valid');
-    feedback.textContent = '';
+    input.classList.remove("is-invalid");
+    input.classList.add("is-valid");
+    feedback.textContent = "";
   }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  const nombre = document.getElementById('nombre');
-  const apellido = document.getElementById('apellido');
+document.addEventListener("DOMContentLoaded", () => {
+  const nombre = document.getElementById("nombre");
+  const apellido = document.getElementById("apellido");
 
-  nombre.addEventListener('input', () => {
-    validarCampoLongitud(nombre, 2, 40, 'El nombre debe tener entre 2 y 40 caracteres.');
+  nombre.addEventListener("input", () => {
+    validarCampoLongitud(
+      nombre,
+      2,
+      40,
+      "El nombre debe tener entre 2 y 40 caracteres."
+    );
   });
 
-  apellido.addEventListener('input', () => {
-    validarCampoLongitud(apellido, 2, 40, 'El apellido debe tener entre 2 y 40 caracteres.');
+  apellido.addEventListener("input", () => {
+    validarCampoLongitud(
+      apellido,
+      2,
+      40,
+      "El apellido debe tener entre 2 y 40 caracteres."
+    );
   });
 });
-
 
 document.addEventListener("DOMContentLoaded", () => {
   const rutInput = document.getElementById("rut");
@@ -91,7 +100,8 @@ function validarRut(rut) {
   }
 
   let dvEsperado = 11 - (suma % 11);
-  dvEsperado = dvEsperado === 11 ? "0" : dvEsperado === 10 ? "K" : dvEsperado.toString();
+  dvEsperado =
+    dvEsperado === 11 ? "0" : dvEsperado === 10 ? "K" : dvEsperado.toString();
 
   return dv === dvEsperado;
 }
@@ -121,7 +131,8 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
       telefonoInput.classList.remove("is-valid");
       telefonoInput.classList.add("is-invalid");
-      telefonoError.textContent = "Ingresa un número válido con formato +569XXXXXXXX";
+      telefonoError.textContent =
+        "Ingresa un número válido con formato +569XXXXXXXX";
     }
   });
 });
@@ -137,7 +148,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const formatoValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(valor);
 
     // Verifica si termina con un dominio permitido
-    const dominioValido = dominiosPermitidos.some(d => valor.endsWith(d));
+    const dominioValido = dominiosPermitidos.some((d) => valor.endsWith(d));
 
     if (formatoValido && dominioValido) {
       correoInput.classList.remove("is-invalid");
@@ -146,7 +157,8 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
       correoInput.classList.remove("is-valid");
       correoInput.classList.add("is-invalid");
-      correoError.textContent = "Ingresa un correo válido con dominio @duoc.cl, @profesor.duoc.cl o @gmail.com";
+      correoError.textContent =
+        "Ingresa un correo válido con dominio @duoc.cl, @profesor.duoc.cl o @gmail.com";
     }
   });
 });
@@ -167,11 +179,11 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
       passwordInput.classList.remove("is-valid");
       passwordInput.classList.add("is-invalid");
-      passwordError.textContent = "Debe tener al menos 8 caracteres, una mayúscula y un número.";
+      passwordError.textContent =
+        "Debe tener al menos 8 caracteres, una mayúscula y un número.";
     }
   });
 });
-
 
 document.addEventListener("DOMContentLoaded", () => {
   const nacimientoInput = document.getElementById("nacimiento");
@@ -195,7 +207,8 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
       nacimientoInput.classList.remove("is-valid");
       nacimientoInput.classList.add("is-invalid");
-      nacimientoError.textContent = "Debes tener al menos 13 años para registrarte.";
+      nacimientoError.textContent =
+        "Debes tener al menos 13 años para registrarte.";
     }
   });
 });
@@ -211,12 +224,47 @@ document.addEventListener("DOMContentLoaded", () => {
     const totalCampos = formulario.querySelectorAll(".form-control").length;
 
     if (camposValidos.length === totalCampos) {
-      // Todos los campos son válidos
-      alert("¡Registro exitoso! Bienvenido a Gomu Store 🎉");
-      window.location.href = "../index.html"; // Redirige al home
+      const nuevoUsuario = {
+        correo: document.getElementById("correo").value.trim(),
+        password: document.getElementById("password").value.trim(),
+        nombre: document.getElementById("nombre").value.trim(),
+        apellido: document.getElementById("apellido").value.trim(),
+        rut: document.getElementById("rut").value.trim(),
+        telefono: document.getElementById("telefono").value.trim(),
+        nacimiento: document.getElementById("nacimiento").value.trim(),
+      };
+
+      // Guarda en localStorage como JSON
+      localStorage.setItem("usuarioRegistrado", JSON.stringify(nuevoUsuario));
+
+      alert("¡Registro exitoso!");
+      window.location.href = "../../index.html";
     } else {
       // Hay campos inválidos
-      alert("Por favor, completa correctamente todos los campos antes de continuar.");
+      alert(
+        "Por favor, completa correctamente todos los campos antes de continuar."
+      );
     }
   });
+});
+
+
+loginForm.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const correoIngresado = loginCorreo.value.trim();
+  const passwordIngresada = loginPassword.value.trim();
+
+  const usuarioGuardado = JSON.parse(localStorage.getItem("usuarioRegistrado"));
+
+  if (
+    usuarioGuardado &&
+    usuarioGuardado.correo === correoIngresado &&
+    usuarioGuardado.password === passwordIngresada
+  ) {
+    alert("¡Inicio de sesión exitoso!");
+    window.location.href = "../../index.html";
+  } else {
+    alert("Correo o contraseña incorrectos.");
+  }
 });
