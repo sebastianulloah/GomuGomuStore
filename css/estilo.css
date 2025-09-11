@@ -12,6 +12,16 @@ body {
   line-height: 1.6;
 }
 
+body {
+  background-image: url('../imagenes/fondogomus.jpg'); /* ajusta la ruta si es necesario */
+  background-size: cover;       /* que cubra toda la pantalla */
+  background-position: center;  /* centrado */
+  background-repeat: no-repeat; /* sin repetir */
+  background-attachment: fixed; /* efecto parallax opcional */
+  min-height: 100vh;            /* asegura altura mínima */
+}
+
+
 .btn-outline-success{
     color: #fff;
     background: #ff007f;
@@ -47,7 +57,7 @@ header h1 {
 
 nav {
   margin-top: 1rem;
-  font-size: x-large;
+  font-size: medium;
 }
 
 nav ul {
@@ -235,11 +245,7 @@ footer {
 }
 
 
-main {
-  min-height: 100vh;
-  background: url('../imagenes/fondogomus.jpg') center/cover no-repeat fixed;
-  padding: 0 2rem 2rem;
-}
+
 
 .imgSuperior {
   width: 100%;
@@ -412,4 +418,97 @@ form button.btn-primary {
 form button.btn-primary:hover {
   background-color: #fd1388;
   box-shadow: 0 6px 20px rgba(255, 0, 127, 0.6);
+}
+
+
+/* Fondo general oscuro */
+body {
+  background-color: #121212;
+  color: #f0f0f0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Título del carrito */
+main h2 {
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: 1px 1px 2px #000;
+}
+
+/* Tarjetas de productos */
+.card.bg-secondary {
+  background-color: #1f1f1f;
+  border: 1px solid #333;
+  transition: transform 0.2s ease;
+}
+
+.card.bg-secondary:hover {
+  transform: scale(1.02);
+}
+
+/* Imagen del producto */
+.card img {
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
+}
+
+/* Botones del carrito */
+.btn-danger,
+.btn-success {
+  font-weight: bold;
+  border-radius: 20px;
+  padding: 6px 16px;
+}
+
+.btn-danger:hover {
+  background-color: #ff4c4c;
+}
+
+.btn-success:hover {
+  background-color: #28a745;
+}
+
+/* Total del carrito */
+#carritoTotal {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+/* Contador del carrito en el navbar */
+#contadorCarrito {
+  background-color: #ff4c4c; /* rojo suave */
+  color: #fff;
+  border-radius: 50%;
+  padding: 4px 8px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  vertical-align: middle;
+  margin-left: 4px;
+}
+
+
+#carritoContenido p {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px dashed #555;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #ccc;
+  margin-top: 40px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card-gomu {
+  background-color: #1a1a1a; /* o el tono que uses en tus otras cards */
+  border: 1px solid #333;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+  transition: transform 0.2s ease;
+}
+
+.card-gomu:hover {
+  transform: scale(1.02);
 }

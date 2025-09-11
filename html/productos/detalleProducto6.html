@@ -57,6 +57,9 @@
                         </li>
 
                         </li>
+                        <a href="../../html/carrito.html" class="nav-link text-white">
+                            Carrito <span id="contadorCarrito" class="contador-carrito">0</span>
+                        </a>
                     </ul>
 
                     <form class="d-flex" role="search">
@@ -118,7 +121,12 @@
                         <p class="card-text fs-4 fw-bold text-neon mt-4">$12.990</p>
 
                         <div class="d-flex flex-wrap gap-3 mt-4">
-                            <a href="#" class="btn btn-primary px-4">Agregar al carrito</a>
+                            <div class="d-flex flex-wrap gap-3 mt-4">
+                            <button class="btn btn-success agregar-carrito" data-id="p006"
+                                data-nombre="Figura de Acción Star Wars - The MandalorianE" data-precio="12990"
+                                data-imagen="https://www.weplay.cl/pub/media/catalog/product/cache/3f1b140c3c9f36fbf6b01dffb521c246/5/0/5010993812363_1.jpg">
+                                Agregar al carrito
+                            </button>
                             <a href="../../html/productos.html" class="btn btn-outline-light">Volver a productos</a>
                         </div>
                     </div>
@@ -126,6 +134,7 @@
             </div>
         </div>
     </main>
+    <script src="../../js/carrito.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"

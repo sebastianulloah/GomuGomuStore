@@ -57,6 +57,9 @@
                         </li>
 
                         </li>
+                        <a href="../../html/carrito.html" class="nav-link text-white">
+                            Carrito <span id="contadorCarrito" class="badge bg-warning">0</span>
+                        </a>
                     </ul>
 
                     <form class="d-flex" role="search">
@@ -116,7 +119,7 @@
                             Creado en su diseño clásico, que es la ampliación along Mushroom Hill Zone con su doble
                             Tails Spinning a toda velocidad creando un viento detrás de él. First 4 Figures detalle
                             añadido todos sus detalles y ha creado una pose dinámica y expresión que complementa su
-                            personalidad. Standing Tall (30, 5 cm, esta estatua encaja perfectamente con los otros en la
+                            personalidad. Standing Tall 30, 5 cm, esta estatua encaja perfectamente con los otros en la
                             serie.
 
                             • Tamaño: 30cm de altura aproximadamente
@@ -125,7 +128,12 @@
                         <p class="card-text fs-4 fw-bold text-neon mt-4">$159.990</p>
 
                         <div class="d-flex flex-wrap gap-3 mt-4">
-                            <a href="#" class="btn btn-primary px-4">Agregar al carrito</a>
+                            <div class="d-flex flex-wrap gap-3 mt-4">
+                            <button class="btn btn-success agregar-carrito" data-id="p003"
+                                data-nombre="Tails Statue First4Figures" data-precio="159990"
+                                data-imagen="https://www.weplay.cl/pub/media/catalog/product/cache/3f1b140c3c9f36fbf6b01dffb521c246/5/0/5060254189970.jpg">
+                                Agregar al carrito
+                            </button>
                             <a href="../../html/productos.html" class="btn btn-outline-light">Volver a productos</a>
                         </div>
                     </div>
@@ -133,6 +141,7 @@
             </div>
         </div>
     </main>
+    <script src="../../js/carrito.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
