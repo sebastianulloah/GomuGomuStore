@@ -512,3 +512,14 @@ main h2 {
 .card-gomu:hover {
   transform: scale(1.02);
 }
+
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
