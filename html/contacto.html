@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto - Gomu-Gomu Store</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+  <link rel="stylesheet" href="../css/estilo.css">
+</head>
+
+<body>
+  
+  <header>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html">
+          <img src="../imagenes/GomuStoreLogo.png" alt="Logo gomu gomu" class="logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="../html/productos.html">Productos</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Nosotros</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="../html/nosotros.html">Quienes somos</a></li>
+                <li><a class="dropdown-item active" href="#">Contacto</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="../html/blogs.html">Noticias</a></li>
+              </ul>
+            </li>
+                <a href="../../html/carrito.html" class="nav-link text-white"> Carrito <span id="contadorCarrito" class="contador-carrito">0</span>
+                </a>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Buscar..." aria-label="Search" />
+            <button class="btn btn-outline-success" type="submit">Buscar</button>
+
+            
+          </form>
+          
+        </div>
+
+      </div>
+      
+    </nav>
+  </header>
+
+  
+  <main class="container my-5">
+    <div class="card bg-dark text-white shadow-lg mx-auto" style="max-width: 700px;">
+      <div class="card-body p-4">
+        <div class="text-center mb-4">
+          <img src="../imagenes/GomuStoreLogo.png" alt="Logo gomu gomu" class="img-fluid" style="max-height: 120px;">
+          <h2 class="fw-bold mt-3">Gomu-Gomu Store</h2>
+        </div>
+
+        <h3 class="text-center fw-bold mb-4">Formulario de Contacto</h3>
+
+        <form id="contactoForm" class="row g-3 needs-validation" novalidate>
+
+          <div class="col-12">
+            <label for="nombreCompleto" class="form-label">Nombre completo</label>
+            <input type="text" class="form-control" id="nombreCompleto" required>
+            <div class="invalid-feedback">Por favor, ingresa tu nombre completo.</div>
+          </div>
+
+
+          <div class="col-12">
+            <label for="correo" class="form-label">Correo electrónico</label>
+            <input type="email" class="form-control" id="correo" required>
+            <div class="invalid-feedback">Por favor, ingresa un correo válido.</div>
+          </div>
+
+
+          <div class="col-12">
+            <label for="mensaje" class="form-label">Contenido</label>
+            <textarea class="form-control" id="mensaje" rows="4" required></textarea>
+            <div class="invalid-feedback">Por favor, escribe tu mensaje.</div>
+          </div>
+
+
+          <div class="col-12 text-center mt-4">
+            <button type="submit" class="btn btn-primary px-5">Enviar Formulario</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+
+
+  <footer class="bg-dark text-light pt-4 mt-5">
+    <div class="container text-center">
+      <p>© 2025 Gomu-Gomu Store - Todos los derechos reservados</p>
+    </div>
+  </footer>
+
+  <script src="../js/validaciones.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
