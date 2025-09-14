@@ -5,20 +5,32 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: "Poppins", Arial, sans-serif;
-  background-color: #0f0f1a; /* Fondo oscuro estilo gamer */
-  color: #ffffff;
-  line-height: 1.6;
+/* ===== RESET GENERAL ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body {
-  background-image: url('../imagenes/fondogomus.jpg'); /* ajusta la ruta si es necesario */
-  background-size: cover;       /* que cubra toda la pantalla */
-  background-position: center;  /* centrado */
-  background-repeat: no-repeat; /* sin repetir */
-  background-attachment: fixed; /* efecto parallax opcional */
-  min-height: 100vh;            /* asegura altura mínima */
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: "Poppins", Arial, sans-serif;
+  background-color: #121212;
+  color: #f0f0f0;
+  line-height: 1.6;
+  background-image: url('../imagenes/fondogomus.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Sticky footer fix */
+main {
+  flex: 1;
 }
 
 
@@ -513,13 +525,3 @@ main h2 {
   transform: scale(1.02);
 }
 
-html, body {
-  height: 100%;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-}
-
-main {
-  flex: 1;
-}

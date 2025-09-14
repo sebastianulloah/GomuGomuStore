@@ -238,7 +238,7 @@ document.addEventListener("DOMContentLoaded", () => {
       localStorage.setItem("usuarioRegistrado", JSON.stringify(nuevoUsuario));
 
       alert("¡Registro exitoso!");
-      window.location.href = "index.html";
+      window.location.href = "../index.html";
     } else {
       // Hay campos inválidos
       alert(
@@ -263,7 +263,7 @@ loginForm.addEventListener("submit", function (e) {
     usuarioGuardado.password === passwordIngresada
   ) {
     alert("¡Inicio de sesión exitoso!");
-    window.location.href = "index.html";
+    window.location.href = "../index.html";
   } else {
     alert("Correo o contraseña incorrectos.");
   }
