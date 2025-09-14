@@ -619,3 +619,35 @@ main h2 {
   transform: scale(1.02);
 }
 
+/* ===== Ajustes responsive para las noticias (botón móvil + centrado imagen) ===== */
+.blog-card {
+  overflow: hidden;
+  /* consistencia */
+}
+
+.blog-card .img-fluid {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+/* estilo para el botón que aparece sólo en móvil */
+.btn-mobile {
+  display: inline-block;
+  padding: 8px 14px;
+  font-size: 0.95rem;
+  border-radius: 10px;
+}
+
+/* ajuste para que las cards se vean más compactas en móvil */
+@media (max-width: 767.98px) {
+  .blog-card {
+    padding: 1rem;
+  }
+  .blog-card h3 {
+    font-size: 1.15rem;
+  }
+  .blog-card p {
+    font-size: 0.95rem;
+  }
+}

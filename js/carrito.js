@@ -13,8 +13,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
       agregarAlCarrito(producto);
       actualizarContadorCarrito();
+
+      const cardBody = boton.closest(".card-body");  
+      const mensaje = cardBody.querySelector(".mensaje-carrito");
+
+      if (mensaje) {
+        mensaje.textContent = "✅ Producto agregado al carrito";
+        mensaje.style.display = "block";
+
+        // Ocultar mensaje después de 2 segundos
+        setTimeout(() => {
+          mensaje.style.display = "none";
+        }, 2000);
+      }
     });
   });
+
+  actualizarContadorCarrito();
 });
 
 // Funciones de carrito
