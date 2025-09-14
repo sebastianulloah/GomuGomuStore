@@ -36,7 +36,7 @@
               </a>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="../html/nosotros.html">Quienes somos</a></li>
-                <li><a class="dropdown-item" href="#">Contacto</a></li>
+                <li><a class="dropdown-item" href="../html/contacto.html">Contacto</a></li>
                 <li>
                   <a class="dropdown-item" href="../html/blogs.html">Noticias</a>
                 </li>
@@ -55,9 +55,9 @@
             </li>
 
             </li>
-            <a href="../../html/carrito.html" class="nav-link text-white">
-                            Carrito <span id="contadorCarrito" class="contador-carrito">0</span>
-                        </a>
+            <a href="../html/carrito.html" class="nav-link text-white">
+              Carrito <span id="contadorCarrito" class="contador-carrito">0</span>
+            </a>
           </ul>
 
           <form class="d-flex" role="search">
@@ -71,16 +71,16 @@
     </nav>
   </header>
   <main class="container my-5">
-  <h2 class="text-white text-center mb-4">Tu Carrito</h2>
+    <h2 class="text-white text-center mb-4">Tu Carrito</h2>
 
-  <div id="carritoContenido"></div>
+    <div id="carritoContenido"></div>
 
-  <div class="text-end mt-4">
-    <h4 class="text-white">Total: <span id="carritoTotal" class="text-warning">$0</span></h4>
-    <button class="btn btn-danger mt-2" onclick="vaciarCarrito()">Vaciar carrito</button>
-    <button class="btn btn-success mt-2 ms-2" onclick="finalizarCompra()">Finalizar compra</button>
-  </div>
-</main>
+    <div class="text-end mt-4">
+      <h4 class="text-white">Total: <span id="carritoTotal" class="text-warning">$0</span></h4>
+      <button class="btn btn-danger mt-2" onclick="vaciarCarrito()">Vaciar carrito</button>
+      <button class="btn btn-success mt-2 ms-2" onclick="finalizarCompra()">Finalizar compra</button>
+    </div>
+  </main>
   <script src="../../js/carrito.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
@@ -101,10 +101,10 @@
       <div class="col-md-4 mb-3">
         <h6 class="fw-bold">Enlaces rápidos</h6>
         <ul class="list-unstyled">
-          <li><a href="#" class="text-light text-decoration-none">Inicio</a></li>
-          <li><a href="#" class="text-light text-decoration-none">Productos</a></li>
-          <li><a href="#" class="text-light text-decoration-none">Nosotros</a></li>
-          <li><a href="#" class="text-light text-decoration-none">Contacto</a></li>
+          <li><a href="../index.html" class="text-light text-decoration-none">Inicio</a></li>
+          <li><a href="../html/productos.html" class="text-light text-decoration-none">Productos</a></li>
+          <li><a href="../html/contacto.html" class="text-light text-decoration-none">Nosotros</a></li>
+          <li><a href="../html/contacto.html" class="text-light text-decoration-none">Contacto</a></li>
         </ul>
       </div>
       <div class="col-md-4 mb-3">
@@ -121,4 +121,5 @@
       <small>© 2025 Gomu-Gomu Store - Todos los derechos reservados</small>
     </div>
   </div>
+
 </html>
