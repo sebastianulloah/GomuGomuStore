@@ -88,6 +88,19 @@ nav a {
   transition: all 0.3s ease;
 }
 
+
+.carousel-item img {
+  max-height: 300px;   /* altura máxima */
+  object-fit: contain; /* mantiene la proporción sin recortar */
+  margin: 0 auto;
+}
+.img-carousel {
+  max-height: 300px;     /* altura máxima */
+  width: auto;           /* no forzar ancho completo */
+  margin: 0 auto;        /* centrar */
+  object-fit: contain;   /* mantiene proporción */
+}
+
 /* todo esto para bajo es para la seccion de noticias o blogs */
 
 .blog-card {
@@ -128,7 +141,19 @@ nav a {
 
     margin-bottom: 40px;
 }
+/* probando cosas */
 
+#opinionesCarousel .carousel-item p {
+  margin-bottom: 0.5rem; /* compactar espacios */
+}
+
+#opinionesCarousel .fw-semibold {
+  font-size: 0.9rem;
+  opacity: 0.8; /* nombre más discreto */
+}
+
+
+/* probando cosas*/
 .neon-title {
   font-size: 2rem;
   text-shadow: 0 0 8px #ff00ff;
@@ -137,13 +162,12 @@ nav a {
 
 .categoria-img {
   transition: transform 0.3s ease;
-  box-shadow: 0 4px 12px rgba(255, 0, 127, 0.4);
-  border-radius: 12px;
+  filter: drop-shadow(0 0 10px #ff00ff); /* sombra alrededor del logo real */
 }
 
 .categoria-link:hover .categoria-img {
   transform: scale(1.05);
-  box-shadow: 0 6px 20px rgba(255, 0, 127, 0.6);
+  filter: drop-shadow(0 0 20px #ff00ff); /* más brillo en hover */
 }
 
 .categoria-link p {
@@ -497,6 +521,7 @@ main h2 {
   vertical-align: middle;
   margin-left: 4px;
 }
+
 
 
 #carritoContenido p {
