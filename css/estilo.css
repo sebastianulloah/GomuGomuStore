@@ -141,7 +141,7 @@ nav a {
 
     margin-bottom: 40px;
 }
-/* probando cosas */
+/* -----------------------------------probando cosas----------------------- */
 
 #opinionesCarousel .carousel-item p {
   margin-bottom: 0.5rem; /* compactar espacios */
@@ -152,8 +152,77 @@ nav a {
   opacity: 0.8; /* nombre más discreto */
 }
 
+/* Espaciado general entre secciones */
+section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
 
-/* probando cosas*/
+/* Separar los títulos de lo que viene después */
+section h2 {
+  margin-bottom: 40px;
+}
+#carouselExampleIndicators {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+#opinionesCarousel {
+  margin-top: 40px;
+
+}
+
+.opinion-card {
+  background: rgba(20, 16, 33, 0.95); /* fondo oscuro sólido con leve opacidad */
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 1.5rem;
+  height: 100%;
+  min-height: 180px; /* asegura que todas tengan altura pareja */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.opinion-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.8);
+}
+
+.opinion-card p {
+  color: #e0def5; /* más contraste para texto */
+  margin: 0.4rem 0;
+}
+
+.opinion-card .fw-semibold {
+  color: #fff;
+  opacity: 0.95;
+}
+
+/* Reduce el espacio inferior del carrusel */
+#opiniones .carousel {
+  margin-bottom: 0; /* elimina margen extra */
+  padding-bottom: 1rem; /* ajusta según veas */
+}
+
+/* También ajusta el row interno para que no tenga demasiado aire */
+#opiniones .row {
+  margin-bottom: 0;
+  padding-bottom: 0.5rem;
+}
+#opiniones {
+  padding-bottom: 2rem; /* antes seguramente tenías 4 o 5rem */
+}
+#top-ventas img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 10px;
+  max-width: 260px;   /* límite en PC */
+  margin: 0 auto;     /* centra la imagen dentro de la columna */
+}
+/* -----------------------probando cosas--------------------------------- */
 .neon-title {
   font-size: 2rem;
   text-shadow: 0 0 8px #ff00ff;
