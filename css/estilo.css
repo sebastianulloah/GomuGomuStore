@@ -609,15 +609,17 @@ main h2 {
 }
 
 .card-gomu {
-  background-color: #1a1a1a; /* o el tono que uses en tus otras cards */
+  background-color: #1a1a1a;
   border: 1px solid #333;
+  border-radius: 12px;
   box-shadow: 0 0 10px rgba(0,0,0,0.4);
   transition: transform 0.2s ease;
 }
 
 .card-gomu:hover {
-  transform: scale(1.02);
+  transform: scale(1.03);
 }
+
 
 /* ===== Ajustes responsive para las noticias (botón móvil + centrado imagen) ===== */
 .blog-card {
